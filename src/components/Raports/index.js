@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Col } from 'react-materialize';
 
 import Raport from '@components/Raport';
-import Loading from '@components/Loading';
 
 class Raports extends Component {
     renderListOfReports() {
@@ -25,7 +24,7 @@ class Raports extends Component {
     render() {
         return (
             <Col s={8} className='grid-example'>
-                {this.props.fetchingData ? <Loading /> : this.renderListOfReports()}
+                {this.renderListOfReports()}
             </Col>
         )
     }

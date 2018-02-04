@@ -13,13 +13,6 @@ class Add extends Component {
         this.secondCurrency = constants.SECOND_CURRENCY;
     }
 
-    handleAddNewCurrency() {
-        this.props.addNewCurrencyReport({
-            "firstCurrency": this.firstCurrency,
-            "secondCurrency": this.secondCurrency,
-        });
-    }
-
     render () {
         return (
             <Col s={4} className='grid-example prettier'>
@@ -30,7 +23,7 @@ class Add extends Component {
                         <p>First currency: <span className="bold">{this.firstCurrency}</span></p>
                         <p>Second currency: <span className="bold">{this.secondCurrency}</span></p>
                     </div>
-                    <Button onClick={this.handleAddNewCurrency.bind(this)}>Add</Button>
+                    <Button >Add</Button>
                 </div>
             </Col>
         )
