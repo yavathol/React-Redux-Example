@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 
 import { Col, Button } from 'react-materialize';
+import * as constants from '@constants/Generic';
 
 import './index.css';
 
 class Add extends Component {
+    constructor(props) {
+        super(props);
+
+        this.firstCurrency = constants.FIRST_CURRENCY;
+        this.secondCurrency = constants.SECOND_CURRENCY;
+    }
+
+    handleAddNewCurrency() {
+        this.props.addNewCurrencyReport({
+            "firstCurrency": this.firstCurrency,
+            "secondCurrency": this.secondCurrency,
+        });
+    }
+
     render () {
         return (
             <Col s={4} className='grid-example prettier'>
@@ -12,10 +27,10 @@ class Add extends Component {
                     <h5>Add new comparison</h5>
                     <hr />
                     <div>
-                        <p>First currency: <span className="bold">USD</span></p>
-                        <p>Second currency: <span className="bold">CHD</span></p>
+                        <p>First currency: <span className="bold">{this.firstCurrency}</span></p>
+                        <p>Second currency: <span className="bold">{this.secondCurrency}</span></p>
                     </div>
-                    <Button>Add</Button>
+                    <Button onClick={this.handleAddNewCurrency.bind(this)}>Add</Button>
                 </div>
             </Col>
         )

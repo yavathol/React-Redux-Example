@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Col } from 'react-materialize';
 
 import Raport from '@components/Raport';
+import Loading from '@components/Loading';
 
-const Raports = props => {
-    return (
-        <Col s={8} className='grid-example'>
+class Raports extends Component {
+    renderListOfReports() {
+        return (            
             <div className="prettier">
                 <h5>List of reports</h5>
                 <hr />
                 
-                { 
-                    props.raportsList.map((eachRaport, index) => {
-                        return <Raport key={index} raport={eachRaport} />
+                {!this.props.raportsList.length ? 
+                    <p>Nothing to display yet.</p>
+                    :
+                    this.props.raportsList.map((eachRaport, index) => {
+                        return <Raport key={index} report={eachRaport} />
                     })
                 }
             </div>
-        </Col>
-    )
+        )
+    }
+
+    render() {
+        return (
+            <Col s={8} className='grid-example'>
+                {this.props.fetchingData ? <Loading /> : this.renderListOfReports()}
+            </Col>
+        )
+    }
 }
 
 export default Raports;

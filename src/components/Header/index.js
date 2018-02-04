@@ -3,6 +3,8 @@ import { Navbar, NavItem, Icon } from 'react-materialize';
 
 import * as constants from '@constants/Generic';
 
+import './index.css';
+
 const Header = () => {
     return (
         <Navbar brand={constants.BRAND} right>
