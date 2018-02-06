@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import Main from '@containers/Main';
+import Main from '@components/Main';
 
 import { configureStore } from '@lib/configureStore';
 

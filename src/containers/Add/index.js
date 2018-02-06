@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import { Col, Button } from 'react-materialize';
 import * as constants from '@constants/Generic';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { ActionCreators } from '@actions';
+
 import './index.css';
 
 class Add extends Component {
@@ -34,4 +38,17 @@ class Add extends Component {
     }
 }
 
-export default Add;
+const mapStateToProps = state => {
+    return {
+        reports: state.reports
+    }
+}
+  
+  const mapDispatchToProps = dispatch => {
+    return bindActionCreators(
+        ActionCreators,
+        dispatch
+    )
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Add);
