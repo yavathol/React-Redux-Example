@@ -13,6 +13,10 @@ class Add extends Component {
         this.secondCurrency = constants.SECOND_CURRENCY;
     }
 
+    handleButtonClick() {
+        this.props.setCurrencies(this.firstCurrency, this.secondCurrency);
+    }
+
     render () {
         return (
             <Col s={4} className='grid-example prettier'>
@@ -23,7 +27,7 @@ class Add extends Component {
                         <p>First currency: <span className="bold">{this.firstCurrency}</span></p>
                         <p>Second currency: <span className="bold">{this.secondCurrency}</span></p>
                     </div>
-                    <Button >Add</Button>
+                    <Button onClick={this.handleButtonClick.bind(this)}>Add</Button>
                 </div>
             </Col>
         )

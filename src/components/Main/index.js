@@ -12,15 +12,11 @@ import { ActionCreators } from '@actions';
 import './index.css';
 
 class Main extends Component {
-    componentDidMount() {
-        this.props.fetchData();
-    }
-
     render() {
         return (
             <div className="main">
                 <Row>
-                    <Add />
+                    <Add { ...this.props } />
                     <Raports raportsList={[]} />
                 </Row>
             </div>
