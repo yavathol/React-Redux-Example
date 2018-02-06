@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row } from 'react-materialize';
 
 import Add from '@containers/Add';
-import Raports from '@components/Raports';
+import Reports from '@containers/Reports';
 
 import './index.css';
 
@@ -12,7 +12,7 @@ class Main extends Component {
             <div className="main">
                 <Row>
                     <Add />
-                    <Raports raportsList={[]} />
+                    <Reports />
                 </Row>
             </div>
         )

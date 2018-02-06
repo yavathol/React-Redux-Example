@@ -2,16 +2,13 @@ import * as types from '@constants/Types';
 
 const INITIAL_STATE = {
     fetchingReport: false,
-    currenciesToFetch: {}
+    reportsList: []
 }
 
 export default (state = INITIAL_STATE, action) => {
-    const { payload } = action;
     switch (action.type) {
-        case types.FETCH_CURRENCIES_DATA: return { ...state, currenciesToFetch: {
-            firstCurrency: payload.firstCurrency,
-            secondCurrency : payload.secondCurrency
-        }};
+        case types.TOGGLE_FETCHING_STATUS: return { ...state, fetchingReport: !state.fetchingReport }
+        case types.SET_CURRENCIES_DATA: return { ...state, reportsList: state.reportsList.concat(action.payload) }
         default: return state;
     }
 }

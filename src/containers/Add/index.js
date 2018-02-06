@@ -18,7 +18,10 @@ class Add extends Component {
     }
 
     handleButtonClick() {
-        this.props.setCurrencies(this.firstCurrency, this.secondCurrency);
+        this.props.addCurrencyReport({
+            firstCurrency: this.firstCurrency,
+            secondCurrency: this.secondCurrency
+        });
     }
 
     render () {
