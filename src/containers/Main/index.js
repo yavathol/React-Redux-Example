@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Row } from 'react-materialize';
 
-/**/
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -26,15 +25,15 @@ class Main extends Component {
 
 const mapStateToProps = state => {
     return {
-      reports: state.reports
+        reports: state.reports
     }
-  }
+}
   
   const mapDispatchToProps = dispatch => {
     return bindActionCreators(
         ActionCreators,
         dispatch
     )
-  }
+}
   
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
