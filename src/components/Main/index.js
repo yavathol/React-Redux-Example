@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row } from 'react-materialize';
 
 import Add from '@components/Add';
-import Raports from '@components/Raports';
+import Reports from '@components/Reports';
 import extendObject from '@lib/extendObject';
 import fetch from 'node-fetch';
 
@@ -48,7 +48,7 @@ class Main extends Component {
             <div className="main">
                 <Row>
                     <Add addNewCurrencyReport={this.addNewCurrencyReport.bind(this)}/>
-                    <Raports
+                    <Reports
                         fetchingData={this.state.fetchingData}
                         raportsList={this.state.currenciesRaports} />
                 </Row>
