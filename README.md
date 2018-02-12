@@ -19,6 +19,26 @@ type following command:
 
 and the app will start (served by default on port 3000).
 
+## Useful parts (by branch)
+
+000-callback-hell:
+
+    e92b3e2 - Example of passing callback function to the parent
+
+001-adding-redux:
+
+    8222a3f - Main components as a Redux container
+
+    32420dc - Add component as a container (with connect)
+
+002-dispatching-async-action:
+
+    a73617a - Finished on Redux Dispatch with fetch request
+
+003-to-be-implemented:
+
+    58e0bc4 - Added to-do instructions inside of Main component
+
 ## Credits
 
 Created by Szymon Sitko @ 2018.
