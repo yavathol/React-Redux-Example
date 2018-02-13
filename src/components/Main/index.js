@@ -11,7 +11,7 @@ class Main extends Component {
         return (
             <Row>
                 <Add />
-                <Raports raportsList={[]} />
+                <Raports />
             </Row>
         )
     }
