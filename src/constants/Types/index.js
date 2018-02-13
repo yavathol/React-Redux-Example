@@ -1,0 +1,1 @@
+export const TOGGLE_FETCH_STATUS = 'toggle_fetch_status';
