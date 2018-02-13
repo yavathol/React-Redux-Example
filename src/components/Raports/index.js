@@ -10,11 +10,11 @@ const Raports = props => {
                 <h5>List of reports</h5>
                 <hr />
                 
-                { 
+                {/* { 
                     props.raportsList.map((eachRaport, index) => {
                         return <Raport key={index} raport={eachRaport} />
                     })
-                }
+                } */}
             </div>
         </Col>
     )
