@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 import './App.css';
 
-import configureStore from '@store/configureStore';
+import { configureStore } from '@store/configureStore';
 
 class App extends Component {
 	render() {
