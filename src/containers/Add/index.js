@@ -45,13 +45,13 @@ const mapStateToProps = state => {
     return {
         reports: state.reports
     }
-}
+};
   
   const mapDispatchToProps = dispatch => {
     return bindActionCreators(
         ActionCreators,
         dispatch
     )
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Add);
